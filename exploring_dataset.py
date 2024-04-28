@@ -8,6 +8,7 @@ def analyzeData(data):
     print(data.shape)
     print(data.columns)
     print(data.info())
+    print(data.describe())
 
 def correlationHeatmap(data):
     correlation_matrix = data.corr()

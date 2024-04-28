@@ -1,4 +1,3 @@
-
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
@@ -36,6 +35,7 @@ def randomForest(data):
     print(classification_report(y_test, y_pred))
 
 def splitData(data):
+    # splitting data into test and training sets
     x = data.drop(columns=['Diabetes_binary'])
     y = data['Diabetes_binary']
 
@@ -44,3 +44,4 @@ def splitData(data):
     print("Size of training set:", len(x_train))
     print("Size of testing set:", len(x_test))
     return x_train, x_test, y_train, y_test
+

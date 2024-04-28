@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def processDS(path):
+def processDS(path):    # pre-processing the dataset
     data = pd.read_csv(path)
     data = data.drop_duplicates()
     data.dropna(axis=0, how='all')
